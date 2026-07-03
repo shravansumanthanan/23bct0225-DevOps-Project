@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  nagios:
+    image: jasonrivers/nagios:latest
+    container_name: nagios
+    ports:
+      - "8085:80"
+    environment:
+      - NAGIOS_TIMEZONE=Asia/Kolkata
+      - NAGIOSADMIN_USER=nagiosadmin
+      - NAGIOSADMIN_PASS=nagios
+    volumes:
+      - ./nagios/abc-website.cfg:/opt/nagios/etc/conf.d/abc-website.cfg
+    restart: always
+
+  graphite:
+    image: graphiteapp/graphite-statsd:latest
+    container_name: graphite
+    ports:
+      - "8088:80"
+      - "2003:2003"
+      - "8125:8125/udp"
+      - "8126:8126"
+    restart: always
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - graphite
+    restart: always
