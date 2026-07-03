@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | ABC Technologies</title>
+  <meta name="description" content="View diagrams of our DevOps pipeline architecture, Kubernetes setup, and office.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="glow-background">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+  </div>
+
+  <header>
+    <a href="index.html" class="logo">
+      <div class="logo-icon">A</div>
+      <span class="logo-text">ABC Technologies</span>
+    </a>
+    <button class="mobile-menu-btn" aria-label="Toggle Menu">&#9776;</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="hero-tag">Visual Portfolio</span>
+      <h1>Our Architecture <span>and Culture</span></h1>
+      <p>Explore diagrams mapping our CI/CD pipelines, container orchestration, and telemetry networks.</p>
+    </section>
+
+    <section class="section-container">
+      <div class="gallery-grid">
+        <!-- Diagram 1 -->
+        <div class="gallery-item">
+          <div class="gallery-img-container">
+            <svg class="gallery-svg" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <rect width="100%" height="100%" fill="#0f172a" />
+              <!-- Grids -->
+              <path d="M 0,50 L 400,50 M 0,100 L 400,100 M 0,150 L 400,150 M 0,200 L 400,200 M 50,0 L 50,250 M 100,0 L 100,250 M 150,0 L 150,250 M 200,0 L 200,250 M 250,0 L 250,250 M 300,0 L 300,250 M 350,0 L 350,250" stroke="#1e293b" stroke-width="0.5" />
+              <!-- Pipeline flow -->
+              <rect x="20" y="90" width="80" height="70" rx="10" fill="url(#grad1)" />
+              <text x="60" y="125" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Git Push</text>
+              <text x="60" y="142" fill="#e0e7ff" font-family="sans-serif" font-size="9" text-anchor="middle">Commit Trigger</text>
+              
+              <path d="M 100,125 L 140,125" stroke="#6366f1" stroke-width="3" fill="none" marker-end="url(#arrow)" />
+              
+              <rect x="150" y="90" width="90" height="70" rx="10" fill="url(#grad2)" />
+              <text x="195" y="125" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Jenkins Build</text>
+              <text x="195" y="142" fill="#cffafe" font-family="sans-serif" font-size="9" text-anchor="middle">Maven & Docker</text>
+              
+              <path d="M 240,125 L 280,125" stroke="#06b6d4" stroke-width="3" fill="none" />
+              
+              <rect x="290" y="90" width="90" height="70" rx="10" fill="linear-gradient(135deg, #10b981, #059669)" />
+              <text x="335" y="125" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Kubernetes</text>
+              <text x="335" y="142" fill="#d1fae5" font-family="sans-serif" font-size="9" text-anchor="middle">Replicas Active</text>
+            </svg>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">Architecture</span>
+            <h3 class="card-title">CI/CD Pipeline Flow</h3>
+            <p class="card-desc">Diagram showing Git events triggering Maven packaging, Docker compilation, and rolling updates in Kubernetes.</p>
+          </div>
+        </div>
+
+        <!-- Diagram 2 -->
+        <div class="gallery-item">
+          <div class="gallery-img-container">
+            <svg class="gallery-svg" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100%" height="100%" fill="#0f172a" />
+              <path d="M 0,50 L 400,50 M 0,100 L 400,100 M 0,150 L 400,150 M 0,200 L 400,200 M 50,0 L 50,250 M 100,0 L 100,250 M 150,0 L 150,250 M 200,0 L 200,250 M 250,0 L 250,250 M 300,0 L 300,250 M 350,0 L 350,250" stroke="#1e293b" stroke-width="0.5" />
+              <!-- Pods -->
+              <rect x="50" y="80" width="80" height="80" rx="15" fill="#1e293b" stroke="#334155" stroke-width="2" />
+              <circle cx="90" cy="110" r="15" fill="#6366f1" />
+              <text x="90" y="145" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">Pod 1</text>
+              
+              <rect x="160" y="80" width="80" height="80" rx="15" fill="#1e293b" stroke="#334155" stroke-width="2" />
+              <circle cx="200" cy="110" r="15" fill="#6366f1" />
+              <text x="200" y="145" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">Pod 2</text>
+              
+              <rect x="270" y="80" width="80" height="80" rx="15" fill="#1e293b" stroke="#334155" stroke-width="2" />
+              <circle cx="310" cy="110" r="15" fill="#06b6d4" />
+              <text x="310" y="145" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">NodePort Svc</text>
+            </svg>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">Clustering</span>
+            <h3 class="card-title">Kubernetes Pod Orchestration</h3>
+            <p class="card-desc">Redundant pod configurations exposed via a custom NodePort Service to distribute visitor workloads.</p>
+          </div>
+        </div>
+
+        <!-- Diagram 3 -->
+        <div class="gallery-item">
+          <div class="gallery-img-container">
+            <svg class="gallery-svg" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100%" height="100%" fill="#0f172a" />
+              <path d="M 0,50 L 400,50 M 0,100 L 400,100 M 0,150 L 400,150 M 0,200 L 400,200 M 50,0 L 50,250 M 100,0 L 100,250 M 150,0 L 150,250 M 200,0 L 200,250 M 250,0 L 250,250 M 300,0 L 300,250 M 350,0 L 350,250" stroke="#1e293b" stroke-width="0.5" />
+              <!-- Telemetry waves -->
+              <path d="M 30,180 Q 90,60 150,150 T 270,90 T 370,120" stroke="#06b6d4" stroke-width="3" fill="none" />
+              <path d="M 30,200 Q 80,100 130,170 T 250,120 T 370,150" stroke="#6366f1" stroke-width="2" fill="none" opacity="0.6" />
+              <circle cx="150" cy="150" r="5" fill="#ffffff" />
+              <circle cx="270" cy="90" r="5" fill="#ffffff" />
+            </svg>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-tag">Telemetry</span>
+            <h3 class="card-title">System Metrics Streams</h3>
+            <p class="card-desc">Visualizing real-time CPU and Memory resource curves collected and pushed to the Graphite database.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">A</div>
+          <span class="logo-text">ABC Tech</span>
+        </a>
+        <p>Driving operational excellence with automation, containers, and absolute reliability.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Location</h4>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+          ABC Technologies HQ<br>
+          Tech Park, Block B, Suite 404<br>
+          Silicon Valley, CA
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> ABC Technologies. All rights reserved.</p>
+      <p>Designed with ❤️ for DevOps Excellence</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

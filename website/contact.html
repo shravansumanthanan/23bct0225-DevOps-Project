@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | ABC Technologies</title>
+  <meta name="description" content="Get in touch with ABC Technologies. Submit inquiries and applications.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="glow-background">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+  </div>
+
+  <header>
+    <a href="index.html" class="logo">
+      <div class="logo-icon">A</div>
+      <span class="logo-text">ABC Technologies</span>
+    </a>
+    <button class="mobile-menu-btn" aria-label="Toggle Menu">&#9776;</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="nav-cta active">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="hero-tag">Reach Out</span>
+      <h1>Let's Connect and <span>Build Together</span></h1>
+      <p>Whether you need infrastructure transformation or want to join our talent pool, we are ready to listen.</p>
+    </section>
+
+    <section class="section-container">
+      <div class="contact-container">
+        <div class="contact-info-panel">
+          <h3>Contact Details</h3>
+          <p style="color: var(--text-secondary); margin-top: 1rem;">Fill out the form to start a conversation, or reach us directly through our channels.</p>
+          
+          <ul class="contact-info-list">
+            <li class="contact-info-item">
+              <div class="contact-info-icon">✉️</div>
+              <div>
+                <strong style="display: block; color: var(--text-primary);">Email Us</strong>
+                <span>info@abctechnologies.com</span>
+              </div>
+            </li>
+            <li class="contact-info-item">
+              <div class="contact-info-icon">📞</div>
+              <div>
+                <strong style="display: block; color: var(--text-primary);">Call Us</strong>
+                <span>+1 (555) 019-2834</span>
+              </div>
+            </li>
+            <li class="contact-info-item">
+              <div class="contact-info-icon">📍</div>
+              <div>
+                <strong style="display: block; color: var(--text-primary);">HQ Location</strong>
+                <span>Silicon Valley, CA</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <form class="contact-form" id="inquiryForm" onsubmit="event.preventDefault(); alert('Thank you! Your message has been received.');">
+            <div class="form-group">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Work Email</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="john@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" name="subject" class="form-input" placeholder="Consulting Services" required>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-input" placeholder="Outline your requirements..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Send Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">A</div>
+          <span class="logo-text">ABC Tech</span>
+        </a>
+        <p>Driving operational excellence with automation, containers, and absolute reliability.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Location</h4>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+          ABC Technologies HQ<br>
+          Tech Park, Block B, Suite 404<br>
+          Silicon Valley, CA
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> ABC Technologies. All rights reserved.</p>
+      <p>Designed with ❤️ for DevOps Excellence</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Autofill subject from query param if present
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get('role');
+      const subjectInput = document.getElementById('subject');
+      if (role && subjectInput) {
+        if (role === 'devops') {
+          subjectInput.value = 'Job Application: Senior DevOps Engineer';
+        } else if (role === 'k8s') {
+          subjectInput.value = 'Job Application: Kubernetes Cluster Architect';
+        } else if (role === 'sre') {
+          subjectInput.value = 'Job Application: Site Reliability Engineer (SRE)';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
